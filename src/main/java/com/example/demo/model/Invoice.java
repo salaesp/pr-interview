@@ -6,10 +6,12 @@ import java.math.BigDecimal;
 
 @Data
 @Entity
-@Table(name = "factura")
-public class Factura {
+@Table(name = "invoices")
+public class Invoice {
     @Id
     private Long id;
-    private String tipo;
-    private BigDecimal monto;
+    
+    private String type;
+    
+    private BigDecimal amount;
 } 

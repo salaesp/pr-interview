@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
+import com.example.demo.model.Invoice;
 import com.example.demo.model.Person;
-import com.example.demo.model.Factura;
 import com.example.demo.repository.PeopleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -26,22 +26,22 @@ public class PersonController {
             }
         }
         if (personWithId != null) {
-            personWithId.setSalario(this.calcularSalario(personWithId));
+            personWithId.setSalary(this.calculateSalary(personWithId));
             return ResponseEntity.ok(personWithId);
         } else {
             return ResponseEntity.notFound().build();
         }
     }
 
-    private BigDecimal calcularSalario(Person person) {
-        List<Factura> facturas = person.getFacturas();
+    private BigDecimal calculateSalary(Person person) {
+        List<Invoice> invoices = person.getInvoices();
         BigDecimal total = BigDecimal.ZERO;
-        for (Factura factura : facturas) {
-            switch (factura.getTipo()) {
-                case "PAGO":
+        for (Invoice invoice : invoices) {
+            switch (invoice.getType()) {
+                case "PAYMENT":
                     break;
-                case "COBRO":
-                    total = total.add(factura.getMonto());
+                case "CHARGE":
+                    total = total.add(invoice.getAmount());
                     break;
                 default:
                     break;

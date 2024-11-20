@@ -13,9 +13,9 @@ public class Person {
     private Long id;
     private String name;
     private boolean active;
-    private BigDecimal salario;
+    private BigDecimal salary;
     
     @OneToMany
     @JoinColumn(name = "person_id")
-    private List<Factura> facturas;
+    private List<Invoice> invoices;
 } 

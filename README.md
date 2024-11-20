@@ -27,4 +27,5 @@ A Spring Boot demonstration project commonly used during technical interviews. T
 
 ## 🔧 Setup & Installation
 
-1. Clone the repository: 
+1. Clone the repository
+2. Run `mvn spring-boot:run` in your terminal

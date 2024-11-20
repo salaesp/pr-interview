@@ -29,3 +29,16 @@ A Spring Boot demonstration project commonly used during technical interviews. T
 
 1. Clone the repository
 2. Run `mvn spring-boot:run` in your terminal
+
+## 📝 Interview Task
+
+Review the code in `PersonController.java`. This controller contains basic CRUD operations but needs to be refactored to make it production-ready. Consider how this code would behave in a real-world environment where things don't always go as planned.
+
+### Evaluation Criteria:
+
+- Code quality and organization
+- Production readiness
+- Best practices implementation
+- Understanding of REST principles
+- Knowledge of Spring Boot features
+- Robustness and reliability

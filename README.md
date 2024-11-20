@@ -5,7 +5,7 @@ A Spring Boot demonstration project commonly used during technical interviews. T
 ## 🚀 Features
 
 - REST API endpoints for managing people and invoices
-- JPA entity relationships (One-to-Many between Person and Factura)
+- JPA entity relationships (One-to-Many between Person and Invoice)
 - H2 in-memory database with sample data
 - Basic CRUD operations
 - Lombok for reducing boilerplate code
